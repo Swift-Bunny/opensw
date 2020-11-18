@@ -5,51 +5,51 @@
  *      Author: yeolamsung
  */
 
-#include <stdio.h> //
+#include <stdio.h> // 표준 입출력 함수 사용을 위한 헤더파일 추가
 
-void func1(int* p);
-void func2(int** p);
-void func3(int*** p);
-void func4(int**** p);
+void func1(int* p); // 함수 func1 프로토타입 선언
+void func2(int** p); // 함수 func2 프로토타입 선언
+void func3(int*** p); // 함수 func3 프로토타입 선언
+void func4(int**** p); // 함수 func4 프로토타입 선언
 
-int main() {
+int main() { // 메인함수
 
-    int i = 100;
-    int* p, ** dp, *** tp;
+    int i = 100; // 정수형 변수 i 선언
+    int* p, ** dp, *** tp; // 단일, 이중, 삼중 포인터 변수 선언
 
-    p = &i;
-    dp = &p;
-    tp = &dp;
+    p = &i; // 단일 포인터 변수인 p를 변수 i의 주소값으로 초기화
+    dp = &p; // 이중 포인터 변수인 dp를 단일 포인터 변수 p의 주소값으로 초기화
+    tp = &dp; // 삼중 포인터 변수인 tp를 이중 포인터 변수 dp의 주소값으로 초기화
 
-    func1(&i);
-    printf("i = %d\n", i);
+    func1(&i); // 정수형 변수 i의 주소값을 인수로 전달
+    printf("i = %d\n", i); // 정수형 변수인 i값 출력
 
-    func2(&p);
-    printf("*p = %d\n", *p);
+    func2(&p); // 단일 포인터 변수 p의 주소값을 인수로 전달
+    printf("*p = %d\n", *p); // 단일 포인터 변수인 p가 가리키는 값을 출력
 
-    func3(&dp);
-    printf("**dp = %d\n", **dp);
+    func3(&dp); // 이중 포인터 변수 dp의 주소값을 인수로 전달
+    printf("**dp = %d\n", **dp); // 이중 포인터 변수인 dp가 가리키는 값을 출력
 
-    func4(&tp);
-    printf("***tp = %d\n", ***tp);
+    func4(&tp); // 삼중 포인터 변수 tp의 주소값을 인수로 전달
+    printf("***tp = %d\n", ***tp); // 삼중 포인터 변수인 tp가 가리키는 값을 출력
 
-    printf("i = %d\n", i);
+    printf("i = %d\n", i); // 정수형 변수인 i값 출력
 
-    return 0;
+    return 0; // 정수 0을 반환 함으로써 메인함수 종료
 }
 
-void func1(int* p) {
-    *p = *p + 100;
+void func1(int* p) { // 메인함수에서 정수형 변수 i의 주소값을 받아 매개 변수로 단일 포인터 변수 p를 선언
+    *p = *p + 100; // 매겨 변수 p가 가리키는 곳에 양의 정수 100을 누적
 }
 
-void func2(int** p) {
-    **p = **p + 100;
+void func2(int** p) { // 메인함수에서 단일 포인터 변수 p의 주소값을 받아 매개 변수로 이중 포인터 변수 p를 선언
+    **p = **p + 100; // 매겨 변수 p가 최종적으로 가리키는 곳에 양의 정수 100을 누적
 }
 
-void func3(int*** p) {
-    ***p = ***p + 100;
+void func3(int*** p) { // 메인함수에서 이중 포인터 변수 dp의 주소값을 받아 매개 변수로 삼중 포인터 변수 p를 선언
+    ***p = ***p + 100; // 매겨 변수 p가 최종적으로 가리키는 곳에 양의 정수 100을 누적
 }
 
-void func4(int**** p) {
-    ****p = ****p + 100;
+void func4(int**** p) { // 메인함수에서 삼중 포인터 변수 tp의 주소값을 받아 매개 변수로 사중 포인터 변수 p를 선언
+    ****p = ****p + 100; // 매겨 변수 p가 최종적으로 가리키는 곳에 양의 정수 100을 누적
 }
