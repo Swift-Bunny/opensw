@@ -5,7 +5,6 @@ import java.util.*;
 public class Jinsu{
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
 		String binary="";
 		String octal="";
 		String decimal="";
