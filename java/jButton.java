@@ -25,7 +25,6 @@ public class Test extends JFrame {
         main_panel.add(bt_2); // 메인패널에 버튼2을 붙인다
 		
 		add(main_panel); // 메인 프레임에 메인패널을 붙여주는 작업
-		
 		setVisible(true); // 프레임 보이게 하기
 	}
 	
