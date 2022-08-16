@@ -1,4 +1,4 @@
-#include <stdio.h> 
+#include <stdio.h> // 표준 입출력 함수의 사용을 위해 추가
 #include <stdlib.h> // 난수를 사용하기 위해서 (=rand,srand함수) stdlib 헤더를 불러옵니다.
 #include <time.h> // 난수값이 시간에 따라 변경되게 하기 위해 time함수를 사용하려고 time 헤더에서 불러옵니다.
 
