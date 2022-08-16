@@ -1,4 +1,4 @@
-#include <stdio.h> 
+#include <stdio.h> // 표준입출력 함수의 사용을 위해 추가
 /* scanf함수와 printf함수등을 이용하기위해 stdio헤더 파일에서
 함수들을 불러오기위해 사용되는 전처리기 입니다. */
 
